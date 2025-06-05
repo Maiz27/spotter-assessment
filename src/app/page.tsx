@@ -4,12 +4,13 @@ import CTA from '@/components/ui/CTA';
 import FeatureCard from '@/components/FeatureCard';
 import Heading, { HeadingFocus } from '@/components/ui/Heading';
 import SpotterComparisonChart from '@/components/SpotterComparisonChart';
+
 import { FEATURES } from '@/lib/Constants';
 
 export default function Home() {
   return (
     <>
-      <main className='flex min-h-screen items-center justify-center'>
+      <div className='grid min-h-[90dvh] place-items-center'>
         <section className='box-border grid max-w-7xl grid-cols-1 gap-2 border-gray-200 p-2 md:border-x lg:grid-cols-14'>
           {/* LEFT COLUMN */}
           <Left />
@@ -17,7 +18,7 @@ export default function Home() {
           {/* RIGHT COLUMN */}
           <Right />
         </section>
-      </main>
+      </div>
     </>
   );
 }

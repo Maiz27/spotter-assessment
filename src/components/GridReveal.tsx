@@ -30,7 +30,7 @@ export default function GridRevealHighlight() {
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onMouseMove={handleMouseMove}
-      className="relative aspect-square h-48 w-full cursor-none overflow-hidden rounded-lg after:absolute after:inset-0 after:bg-gradient-to-b after:from-background/0 after:from-80% after:to-background/100 after:content-['']"
+      className="relative aspect-square max-h-60 w-full cursor-none overflow-hidden rounded-lg after:absolute after:inset-0 after:bg-gradient-to-b after:from-background/0 after:from-80% after:to-background/100 after:content-['']"
     >
       {/*  Base grid – all gray */}
       <div

@@ -16,13 +16,13 @@ export default function FeatureCard({
 }: FeatureCardProps) {
   return (
     <Card
-      className={`flex ${topSection ? 'flex-1 flex-col overflow-hidden py-0 md:p-0' : 'gap-4 md:p-8'}`}
+      className={`flex ${topSection ? 'flex-col overflow-hidden py-8 md:p-0 md:py-0' : 'gap-4 md:p-8'}`}
     >
       {topSection ? (
         <>
-          {topSection}
+          <div className='h-max grow'>{topSection}</div>
 
-          <div className='flex gap-4 px-8 md:py-4 md:pb-8'>
+          <div className='flex flex-none gap-4 px-8 md:py-4 md:pb-8'>
             <span className='h-fit rounded p-1 text-lg shadow'>{icon}</span>
             <div className='space-y-2'>
               <h3 className='font-medium text-spotter-dark'>{title}</h3>
