@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Navbar = () => {
   return (
-    <nav className='shadow'>
+    <nav className='px-2 shadow'>
       <div className='mx-auto max-w-7xl'>
         <div className='flex h-16 items-center justify-between'>
           <div className='flex flex-shrink-0 items-center gap-1'>

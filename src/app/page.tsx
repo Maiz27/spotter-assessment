@@ -10,7 +10,7 @@ import { FEATURES } from '@/lib/Constants';
 export default function Home() {
   return (
     <>
-      <div className='relative z-10 grid min-h-[92.5dvh] place-items-center'>
+      <div className='relative z-10 grid min-h-[92.5dvh] place-items-center p-2'>
         <section className='box-border grid max-w-7xl grid-cols-1 gap-2 border-gray-200 p-2 md:border-x lg:grid-cols-14'>
           {/* LEFT COLUMN */}
           <Left />
