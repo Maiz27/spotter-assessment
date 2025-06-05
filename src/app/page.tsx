@@ -3,13 +3,8 @@ import Chip from '@/components/ui/Chip';
 import CTA from '@/components/ui/CTA';
 import FeatureCard from '@/components/FeatureCard';
 import Heading, { HeadingFocus } from '@/components/ui/Heading';
-import GridReveal from '@/components/GridReveal';
-
-import {
-  HiOutlineDeviceMobile,
-  HiOutlineMap,
-  HiOutlineSparkles,
-} from 'react-icons/hi';
+import SpotterComparisonChart from '@/components/SpotterComparisonChart';
+import { FEATURES } from '@/lib/Constants';
 
 export default function Home() {
   return (
@@ -44,39 +39,15 @@ const Left = () => {
         <CTA>Explore More</CTA>
       </div>
 
-      {/* Placeholder for graph */}
-      <div className='flex h-40 items-center justify-center rounded-lg bg-gray-100 text-gray-400'>
-        Graph goes here
-      </div>
+      <SpotterComparisonChart />
     </Card>
   );
 };
 
 const Right = () => {
-  const features = [
-    {
-      icon: <HiOutlineDeviceMobile className='text-spotter-magenta' />,
-      title: 'Seamless across devices.',
-      description:
-        'Connect and synchronize fleet data effortlessly — whether on web, mobile, or onboard systems.',
-    },
-    {
-      icon: <HiOutlineMap className='text-spotter-magenta' />,
-      title: 'Optimize fleet performance.',
-      description:
-        'Use AI to match loads, reduce idle time, and ensure efficient routing across your entire network.',
-      topSection: <GridReveal />,
-    },
-    {
-      icon: <HiOutlineSparkles className='text-spotter-magenta' />,
-      title: 'Empower your operations team.',
-      description:
-        'Simplify workflows and improve engagement with intelligent tools that help your team work smarter and faster.',
-    },
-  ];
   return (
     <div className='flex flex-col gap-2 lg:col-span-6'>
-      {features.map((feature, index) => (
+      {FEATURES.map((feature, index) => (
         <FeatureCard
           key={index}
           icon={feature.icon}

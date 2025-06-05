@@ -34,7 +34,8 @@ export default function GridRevealHighlight() {
     >
       {/*  Base grid – all gray */}
       <div
-        className={`absolute inset-0 grid grid-cols-[repeat(${GRID_SIZE},_1fr)] gap-2`}
+        className={`absolute inset-0 grid gap-2`}
+        style={{ gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)` }}
       >
         {Array.from({ length: GRID_SIZE * GRID_SIZE }).map((_, i) => (
           <div key={i} className='size-1.5 bg-spotter-gray' />
@@ -43,10 +44,11 @@ export default function GridRevealHighlight() {
 
       {/* Highlight layer with circular mask */}
       <motion.div
-        className={`pointer-events-none absolute inset-0 z-10 grid grid-cols-[repeat(${GRID_SIZE},_1fr)] gap-2`}
+        className={`pointer-events-none absolute inset-0 z-10 grid gap-2`}
         style={{
           maskImage: `radial-gradient(${radius}px at ${cursorPos.x}px ${cursorPos.y}px, white 99%, transparent 100%)`,
           WebkitMaskImage: `radial-gradient(${radius}px at ${cursorPos.x}px ${cursorPos.y}px, white 99%, transparent 100%)`,
+          gridTemplateColumns: `repeat(${GRID_SIZE}, 1fr)`,
         }}
       >
         {isHovering && (
