@@ -4,10 +4,9 @@ import Image from 'next/image';
 
 export const Navbar = () => {
   return (
-    <nav className='bg-spotter-light/40 shadow'>
+    <nav className='shadow'>
       <div className='mx-auto max-w-7xl'>
         <div className='flex h-16 items-center justify-between'>
-          {/* Left: Logo Placeholder */}
           <div className='flex flex-shrink-0 items-center gap-1'>
             <Image
               src='/imgs/logo/logo.png'
@@ -20,7 +19,6 @@ export const Navbar = () => {
             </span>
           </div>
 
-          {/* Right: Single CTA */}
           <div className='grid h-full place-items-center'>
             <CTA className='mt-0 text-lg font-medium'>Get Started</CTA>
           </div>
