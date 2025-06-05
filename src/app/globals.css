@@ -29,10 +29,12 @@
   --color-foreground: var(--foreground);
   --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  --color-spotter-teal: #005a64;
-  --color-spotter-magenta: #e74d6a;
-  --color-spotter-dark: #00353b;
-  --color-spotter-light: #e5f6f7;
+  --color-spotter-teal: #008080;
+  --color-spotter-magenta: #f84960;
+  --color-spotter-dark: #061830;
+  --color-spotter-light: #cae2e4;
+
+  --color-spotter-gray: #e5e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,4 +48,5 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: lighter;
 }
